@@ -1,2 +1,2 @@
 # so-so
-A volume of poem running on Nintendo® Game Boy™.
+A volume of poetry running on Nintendo® Game Boy™.
