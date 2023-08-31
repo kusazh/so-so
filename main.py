@@ -7,20 +7,15 @@ draw = ImageDraw.Draw(image)
 draw.fontmode= "1"
 keywords = []
 for i, line in enumerate('''
-将眼睛眯起来
-就能变得敏锐
-我知道这是科学
-我知道这是寓言
+虚伪光投射假宝玉
+[虚拟]锁链洞穴
+我望向远方[计算]一秒
+系统[自动]补全月亮
 
-话已经被说满了
-只好缩减
-我知道这是诗歌
-我知道这是方笺
-
-我们都被困在孤岛上
-所以才造[船]
-我知道这是人类
-我知道还有其他人
+望着那个月亮
+构思新的诗歌模型
+5G 电子烟通信
+[随机]匹配诗情
 '''.splitlines()):
     current = 14
     fill = (7, 24, 33)
@@ -34,11 +29,12 @@ for i, line in enumerate('''
             fill = (7, 24, 33)
             is_keyword = False
             keywords.append(keyword)
+            keyword = ''
             continue
         if is_keyword:
             keyword += ch
         text_width = draw.textlength(ch, font)
-        draw.text((current, 14 * i), ch, font=font, fill=fill)
-        current += text_width - 2
+        draw.text((current, 16 * i), ch, font=font, fill=fill)
+        current += text_width
 image = image.resize((160, 144), resample=0)
-image.save(f'asserts/{"-".join(keywords)}.png')
+image.save(f'so-so/assets/backgrounds/{"-".join(keywords)}.png')
