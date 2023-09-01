@@ -7,7 +7,20 @@ draw = ImageDraw.Draw(image)
 draw.fontmode= "1"
 keywords = []
 text = '''
-草[々]
+翘角的城市
+解构折纸的方式
+你寄居帝王之座
+以冠冕乞讨
+
+旧时代的尘嚣
+革命的预兆
+[话语]并列之间
+篡改一道圣旨
+
+门上的封纸
+粘住紧张的街道
+你以微服私访
+寻找一味新药
 '''
 for i, line in enumerate(text.splitlines()):
     current = 14
