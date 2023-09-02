@@ -6,24 +6,27 @@ image = Image.new('RGB', (320, 288), (219, 248, 199))
 draw = ImageDraw.Draw(image)
 draw.fontmode= "1"
 keywords = []
-text = '''
-翘角的城市
-解构折纸的方式
-你寄居帝王之座
-以冠冕乞讨
+text = '''　　　　　　　　　　　像恐龙奔跑一样
+我已经很久没有[奔跑]　　留下辞世之句
+上一次是白垩纪末
+历史蚀刻脚印
+留下被篡改的意义
 
-旧时代的尘嚣
-革命的预兆
-[话语]并列之间
-篡改一道圣旨
+我已经很久没有哭
+上一次是今天早晨
+睡眠可以将情绪消除
+同时，理由被分泌
 
-门上的封纸
-粘住紧张的街道
-你以微服私访
-寻找一味新药
+那么生存是什么
+我一直都有在呼吸
+是引起风暴
+还是杀死远方蝴蝶
+
+我已经很久没有死
+上一次是在大阪
 '''
 for i, line in enumerate(text.splitlines()):
-    current = 14
+    current = 16
     fill = (7, 24, 33)
     is_keyword, keyword = False, ''
     for ch in line:
