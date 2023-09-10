@@ -5069,15 +5069,51 @@
                     "height": 1,
                     "script": [
                         {
-                            "command": "EVENT_SWITCH_SCENE",
+                            "command": "EVENT_IF_INPUT",
                             "args": {
-                                "sceneId": "7be02e40-8ed6-477d-b98b-4a47b86f6d6c",
-                                "x": 9,
-                                "y": 11,
-                                "direction": "down",
-                                "fadeSpeed": "2"
+                                "input": [
+                                    "left",
+                                    "up",
+                                    "down",
+                                    "right"
+                                ],
+                                "__collapseElse": true
                             },
-                            "id": "97f722d4-2c43-400e-b72e-9d917ffa2eae"
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_TIMER_RESTART",
+                                        "args": {},
+                                        "id": "2a99c877-9c41-4cd5-9be5-8cb626f3f98e"
+                                    }
+                                ],
+                                "false": []
+                            },
+                            "id": "87223631-41c5-4f61-9b14-6973a6f27c8d"
+                        },
+                        {
+                            "command": "EVENT_SET_TIMER_SCRIPT",
+                            "args": {
+                                "duration": 1,
+                                "frames": 30,
+                                "__scriptTabs": "end"
+                            },
+                            "children": {
+                                "script": [
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "7be02e40-8ed6-477d-b98b-4a47b86f6d6c",
+                                            "x": 9,
+                                            "y": 11,
+                                            "direction": "down",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "97f722d4-2c43-400e-b72e-9d917ffa2eae"
+                                    }
+                                ]
+                            },
+                            "id": "940e014c-680c-4d03-b305-c4e4b0f40f13"
                         }
                     ],
                     "leaveScript": []
@@ -38843,7 +38879,7 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 194,
+        "worldScrollX": 702,
         "worldScrollY": 0,
         "zoom": 157.09885386377573,
         "customColorsEnabled": false,
@@ -38873,9 +38909,9 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            520,
-            157,
-            157
+            632,
+            191,
+            191
         ],
         "showNavigator": true,
         "defaultFontId": "948c169c-8e4b-491c-a5f0-66898bbf45d9",

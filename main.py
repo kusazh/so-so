@@ -7,22 +7,22 @@ draw = ImageDraw.Draw(image)
 draw.fontmode= "1"
 keywords = []
 text = '''
-讲师挥舞概念大旗
-试图指导生活
-演员搬弄概念游戏
-试图模糊生活定义
-
-概念吃掉概念
-戏剧继续上演
-叛乱者引爆对立
-对立打破第一面墙壁
-
-警察肃清街道
-学者沉默不语
-诗人乞讨卖艺
-难民偷窃我的硬币
+草々
+kusa
+https://kus.[AI]/so-so/
 
 
+
+
+
+
+
+
+
+
+
+
+Version 0.2
 '''
 for i, line in enumerate(text.splitlines()):
     current = 16
