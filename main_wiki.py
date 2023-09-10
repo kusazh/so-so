@@ -2,24 +2,23 @@ from PIL import Image, ImageDraw, ImageFont
 
 font = ImageFont.truetype('MisekiBitmap.ttf', size=16)
 
-image = Image.new('RGB', (320, 288), (219, 248, 199))
+image = Image.open('wiki.png').resize((320, 288), resample=0)
 draw = ImageDraw.Draw(image)
 draw.fontmode= "1"
 keywords = []
 text = '''
-[奥坎剃刀]生锈了
-你将它掷入[狄拉克之海]
-那[波动方程式]有够[单调]
 
-在[宇宙微波背景]下
-我们看向[怪兽的月光]
-亦无法从[事件视界][逃逸]
 
-远方传出的微小[红移]
-闭上眼感受它的[弦]
-是[点灯夫群]正向我们而来
+
+
+
+[点灯夫群]
+
+在群论中，点灯夫群（英语：Lamplightergroup）是两个群 我/2我 和 我 的圈积
+(我/2我) s Z。
 '''
-for i, line in enumerate(text.splitlines()):
+i = 0
+for line in text.splitlines():
     current = 16
     fill = (7, 24, 33)
     is_keyword, keyword = False, ''
@@ -36,11 +35,15 @@ for i, line in enumerate(text.splitlines()):
             continue
         if is_keyword:
             keyword += ch
+        if current > 310:
+            i += 1
+            current = 16
         text_width = draw.textlength(ch, font)
         draw.text((current, 16 * i), ch, font=font, fill=fill)
         # if i == 6:
         #     current += text_width - 1
         # else:
         current += text_width
+    i += 1
 image = image.resize((160, 144), resample=0)
 image.save(f'so-so/assets/backgrounds/{"-".join(keywords)}-{len(text)}.png')
