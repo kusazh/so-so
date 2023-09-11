@@ -2,6 +2,7 @@
 <html lang="zh-TW">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>草々</title>
     <style type="text/css">
@@ -11,11 +12,11 @@
       }
 
       body {
-        background-color: #e0f8cf;
-        font: 32px 'MisekiBitmap', sans-serif;
-        color: #071821;
-        padding: 0 16px 0 20px;
-        line-height: 32px;
+        background-color: #efffde;
+        font: 24px "MisekiBitmap", sans-serif;
+        color: #183442;
+        padding: 0 1em 0 1em;
+        line-height: 1em;
       }
 
       p {
@@ -23,22 +24,45 @@
       }
 
       a {
-        color: #306850;
+        color: #529273;
         text-decoration: none;
       }
 
       a:hover {
-        color: #86c06c;
+        color: #acd794;
+      }
+
+      iframe {
+        width: 20em;
+        height: 18em;
+        border: 0;
+        margin: 0 -0.75em 0 -0.75em;
+      }
+
+      @media only screen and (max-width: 480px) {
+        body {
+          font-size: 16px;
+        }
       }
     </style>
   </head>
   <body>
-    <p>草々<br>kusa</p>
+    <p>
+      <iframe id="game" src="./game" onload="this.contentWindow.focus()"></iframe>
+    </p>
+    <p>
+      「和彩色文字交互，进入诗歌迷宫。」
+    </p>
     <p>
       一本能够在任天堂游戏男孩 (Nintendo® Game Boy™) 上运行的诗集。
     </p>
     <p>
-      Coming Soon 2023
+      上下左右键控制移动。若失去焦点，请点击游戏页框部分。
+    </p>
+    <p>
+      在游玩本作品的过程中，建议自行播放背景音乐，推荐专辑是
+      <br>
+      Disasterpeace - FEZ (Original Game Soundtrack)
     </p>
     <p>
       本著作系采用 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">创用 CC 姓名标示 4.0 国际 授权条款</a> 授权。
