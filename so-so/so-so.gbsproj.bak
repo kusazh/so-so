@@ -16611,23 +16611,64 @@
             "triggers": [
                 {
                     "name": "",
-                    "id": "eeacab29-a0ce-4e29-8f54-3386df036706",
+                    "id": "0ba53e8c-c000-43ae-8c5a-be1d0f8b6a6f",
                     "x": 6,
                     "y": 7,
-                    "symbol": "trigger_69",
+                    "symbol": "trigger_106",
                     "width": 2,
                     "height": 1,
                     "script": [
                         {
-                            "command": "EVENT_SWITCH_SCENE",
+                            "command": "EVENT_VARIABLE_MATH",
                             "args": {
-                                "sceneId": "d72b9a01-ddfa-493b-aae0-b446bbf16c42",
-                                "x": 9,
-                                "y": 4,
-                                "direction": "down",
-                                "fadeSpeed": "2"
+                                "vectorX": "L0",
+                                "operation": "set",
+                                "other": "rnd",
+                                "vectorY": "L0",
+                                "value": "0",
+                                "minValue": "0",
+                                "maxValue": 1,
+                                "clamp": false
                             },
-                            "id": "0972e4d5-86c5-4fab-84ba-8ce3c58f4543"
+                            "id": "58196d9b-499c-461f-862e-ab00d6e34c0e"
+                        },
+                        {
+                            "command": "EVENT_IF_VALUE",
+                            "args": {
+                                "variable": "L0",
+                                "operator": "==",
+                                "comparator": "0",
+                                "__collapseElse": false
+                            },
+                            "children": {
+                                "true": [
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "3cce6892-f9df-49aa-b809-130483b1b883",
+                                            "x": 13,
+                                            "y": 11,
+                                            "direction": "down",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "3f34f211-7907-45b2-9d2f-830b8497bf7c"
+                                    }
+                                ],
+                                "false": [
+                                    {
+                                        "command": "EVENT_SWITCH_SCENE",
+                                        "args": {
+                                            "sceneId": "d72b9a01-ddfa-493b-aae0-b446bbf16c42",
+                                            "x": 9,
+                                            "y": 4,
+                                            "direction": "down",
+                                            "fadeSpeed": "2"
+                                        },
+                                        "id": "5fc3bd50-55df-4c43-aec4-fd5007c7dc18"
+                                    }
+                                ]
+                            },
+                            "id": "6fce4fde-b5e1-4226-a4e4-ca9c56e916ec"
                         }
                     ],
                     "leaveScript": []
@@ -38862,6 +38903,11 @@
             "id": "747a7362-dd1e-4199-ae11-dec0fa77084f__L0",
             "name": "Ramdom",
             "symbol": "var_ramdom_4"
+        },
+        {
+            "id": "0ba53e8c-c000-43ae-8c5a-be1d0f8b6a6f__L0",
+            "name": "Ramdom",
+            "symbol": "var_ramdom_5"
         }
     ],
     "engineFieldValues": [
@@ -38879,9 +38925,9 @@
         "startDirection": "down",
         "showCollisions": true,
         "showConnections": true,
-        "worldScrollX": 702,
-        "worldScrollY": 0,
-        "zoom": 157.09885386377573,
+        "worldScrollX": 510,
+        "worldScrollY": 1564,
+        "zoom": 227.7561665251851,
         "customColorsEnabled": false,
         "sgbEnabled": false,
         "customHead": "",
